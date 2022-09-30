@@ -1,0 +1,12 @@
+---
+  - name: Print test
+    ansible.builtin.debug:
+      msg: "Hello!"
+
+  - name: Run simple scan
+    ansible.builtin.shell: nmap -n {{ip_addresses}} -oA scan
+    tags: syn
+
+  - name: Run full scan
+    ansible.builtin.shell: nmap -n {{ip_addresses}} -oA scan
+    tags: full
