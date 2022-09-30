@@ -1,0 +1,6 @@
+---
+  - name: "Automate some actions"
+    #become: yes
+    hosts: kali
+    roles:
+    - nmap
